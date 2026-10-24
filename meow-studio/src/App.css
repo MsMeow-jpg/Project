@@ -510,9 +510,9 @@
   letter-spacing: 1px;
 }
 
-/* =========================
+/* =====================================
    STREET DECOR / GRAFFITI
-========================= */
+===================================== */
 
 .street-decor {
   position: fixed;
@@ -526,11 +526,21 @@
   position: absolute;
   opacity: 0.16;
   mix-blend-mode: multiply;
-  filter: contrast(1.2) saturate(0.9);
+  filter:
+    drop-shadow(1px 0 0 #fff)
+    drop-shadow(-1px 0 0 #fff)
+    drop-shadow(0 1px 0 #fff)
+    drop-shadow(0 -1px 0 #fff)
+    drop-shadow(1px 1px 0 #fff)
+    drop-shadow(-1px -1px 0 #fff)
+    drop-shadow(1px -1px 0 #fff)
+    drop-shadow(-1px 1px 0 #fff)
+    contrast(1.2)
+    saturate(0.9);
   user-select: none;
 }
 
-/* Позиции */
+/* STREET TAG POSITIONS */
 
 .tag-smile {
   top: 110px;
@@ -572,12 +582,13 @@
     wobbleTag 7s ease-in-out infinite;
 }
 
-/* Анимации */
+/* STREET ANIMATIONS */
 
 @keyframes floatTag1 {
   0%, 100% {
     transform: translateY(0) rotate(-8deg);
   }
+
   50% {
     transform: translateY(-12px) rotate(-5deg);
   }
@@ -587,6 +598,7 @@
   0%, 100% {
     transform: translateY(0) rotate(6deg);
   }
+
   50% {
     transform: translateY(14px) rotate(9deg);
   }
@@ -596,6 +608,7 @@
   0%, 100% {
     transform: translateY(0) rotate(-4deg);
   }
+
   50% {
     transform: translateY(-10px) rotate(2deg);
   }
@@ -605,6 +618,7 @@
   0%, 100% {
     transform: translateY(0) rotate(-2deg);
   }
+
   50% {
     transform: translateY(12px) rotate(3deg);
   }
@@ -614,12 +628,15 @@
   0%, 100% {
     margin-left: 0;
   }
+
   25% {
     margin-left: 3px;
   }
+
   50% {
     margin-left: -2px;
   }
+
   75% {
     margin-left: 2px;
   }
@@ -629,9 +646,11 @@
   0% {
     margin-left: 0;
   }
+
   50% {
     margin-left: 12px;
   }
+
   100% {
     margin-left: 0;
   }
@@ -641,19 +660,25 @@
   0%, 100% {
     transform: translateY(0) rotate(-4deg);
   }
+
   20% {
     transform: translateY(-2px) rotate(-3deg);
   }
+
   40% {
     transform: translateY(1px) rotate(-5deg);
   }
+
   60% {
     transform: translateY(-3px) rotate(-2deg);
   }
+
   80% {
     transform: translateY(2px) rotate(-6deg);
   }
 }
+
+/* LAYER ORDER */
 
 .header,
 .hero,
@@ -663,7 +688,9 @@
   z-index: 3;
 }
 
-/* RESPONSIVE - TABLET */
+/* =====================================
+   RESPONSIVE — TABLET
+===================================== */
 
 @media (max-width: 1000px) {
   .art-grid {
@@ -676,9 +703,39 @@
     grid-template-columns: 1fr;
     gap: 35px;
   }
+
+  .street-tag {
+    opacity: 0.11;
+  }
+
+  .tag-smile {
+    width: 120px;
+    top: 90px;
+    right: 3%;
+  }
+
+  .tag-goodvibes {
+    width: 110px;
+    top: 380px;
+    left: 2%;
+  }
+
+  .tag-believe {
+    width: 105px;
+    top: 760px;
+    right: 2%;
+  }
+
+  .tag-truth {
+    width: 140px;
+    bottom: 60px;
+    left: 3%;
+  }
 }
 
-/* RESPONSIVE - MOBILE */
+/* =====================================
+   RESPONSIVE — MOBILE
+===================================== */
 
 @media (max-width: 700px) {
   .header {
@@ -741,39 +798,7 @@
   .order-selected {
     align-items: flex-start;
   }
-}
 
-@media (max-width: 900px) {
-  .street-tag {
-    opacity: 0.11;
-  }
-
-  .tag-smile {
-    width: 120px;
-    top: 90px;
-    right: 3%;
-  }
-
-  .tag-goodvibes {
-    width: 110px;
-    top: 380px;
-    left: 2%;
-  }
-
-  .tag-believe {
-    width: 105px;
-    top: 760px;
-    right: 2%;
-  }
-
-  .tag-truth {
-    width: 140px;
-    bottom: 60px;
-    left: 3%;
-  }
-}
-
-@media (max-width: 600px) {
   .tag-goodvibes,
   .tag-believe {
     display: none;
