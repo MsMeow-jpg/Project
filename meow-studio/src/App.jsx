@@ -1,9 +1,11 @@
+import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Admin from "./pages/Admin";
 import { useState } from "react";
 import Gallery from "./components/Gallery";
 import OrderForm from "./components/OrderForm";
-import "./App.css";
+import StreetDecor from "./components/StreetDecor";
+
 
 function Home() {
   const [selectedArtwork, setSelectedArtwork] = useState(null);
@@ -23,6 +25,7 @@ function Home() {
 
   return (
     <div className="app">
+      <StreetDecor />
       <header className="header">
         <a href="#" className="logo">
           MEOW<span>STUDIO.</span>
