@@ -5,7 +5,7 @@ import { useState } from "react";
 import Gallery from "./components/Gallery";
 import OrderForm from "./components/OrderForm";
 import StreetDecor from "./components/StreetDecor";
-
+import Login from "./pages/Login";
 
 function Home() {
   const [selectedArtwork, setSelectedArtwork] = useState(null);
@@ -114,10 +114,12 @@ function Home() {
 }
 
 
+
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/admin" element={<Admin />} />
       <Route path="*" element={<Home />} />
     </Routes>

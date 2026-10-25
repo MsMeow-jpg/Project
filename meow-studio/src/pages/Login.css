@@ -1,0 +1,150 @@
+
+/* =====================================
+   MEOW STUDIO — ADMIN LOGIN
+===================================== */
+
+.login-page {
+  position: relative;
+  min-height: 100vh;
+  background: #111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px 60px;
+  overflow: hidden;
+}
+
+.login-page::before {
+  content: "PRIVATE ACCESS";
+  position: absolute;
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(70px, 15vw, 220px);
+  color: rgba(255, 255, 255, 0.025);
+  white-space: nowrap;
+  transform: rotate(-12deg);
+  pointer-events: none;
+}
+
+.login-logo {
+  position: absolute;
+  top: 35px;
+  left: 7%;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 24px;
+  color: #fff;
+}
+
+.login-logo span {
+  color: #d5ff37;
+}
+
+.login-box {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 510px;
+  padding: 45px;
+  background: #1b1b1b;
+  border: 1px solid #444;
+  box-shadow: 9px 9px 0 #d5ff37;
+}
+
+.login-label {
+  font-size: 11px;
+  color: #d5ff37;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.login-box h1 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(30px, 5vw, 46px);
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.login-box h1 span {
+  color: #d5ff37;
+}
+
+.login-description {
+  color: #aaa;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-box label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #d5ff37;
+  margin-bottom: 10px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 17px;
+  margin-bottom: 25px;
+  background: #111;
+  color: #fff;
+  border: 1px solid #555;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.login-box input:focus {
+  border-color: #d5ff37;
+}
+
+.login-box form button {
+  width: 100%;
+  padding: 20px;
+  background: #d5ff37;
+  color: #111;
+  border: none;
+  font-family: "Archivo Black", sans-serif;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-box form button:hover:not(:disabled) {
+  background: #ff4f91;
+}
+
+.login-box form button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.login-error {
+  color: #ff4f91;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.login-footer {
+  position: absolute;
+  bottom: 25px;
+  font-size: 10px;
+  color: #777;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+  .login-box {
+    padding: 25px;
+    box-shadow: 5px 5px 0 #d5ff37;
+  }
+
+  .login-logo {
+    left: 20px;
+  }
+}
